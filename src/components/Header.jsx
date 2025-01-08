@@ -44,12 +44,12 @@ const Header = () => {
 
     return (
         <div className="flex justify-end">
-            <div className="absolute w-full px-8 bg-gradient-to-b from-black z-10">
-                <img className="w-44" src={LOGO} alt="logo" />
+            <div className="absolute w-full px-4 py-3 bg-gradient-to-b from-black z-10">
+                <img className="w-28" src={LOGO} alt="logo" />
             </div>
             {user && (
                 <button
-                    className="bg-red-700 m-6 px-2 rounded-sm absolute z-10"
+                    className="bg-red-700 m-6 px-2 py-1 rounded-sm absolute z-10 hover:bg-red-800 text-xs"
                     onClick={handleLogOut}
                 >
                     Log Out
