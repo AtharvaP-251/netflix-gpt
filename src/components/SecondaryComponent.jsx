@@ -1,8 +1,14 @@
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
+import useNowPopularMovies from "../hooks/usePopularMovies";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import useUpcomingMovies from "../hooks/useUpcomingMovies";
 
 const SecondaryComponent = () => {
     const movies = useSelector((store) => store?.movie);
+    useNowPopularMovies();
+    useTopRatedMovies();
+    useUpcomingMovies();
 
     return ({ movies } && (
         <div className="-my-56 z-10 bg-black">

@@ -13,4 +13,26 @@ export const API_OPTIONS = {
     },
 };
 
+export const SUPPORTED_LANGUAGES = [
+    { identifier: "en", name: "English" },
+    { identifier: "hindi", name: "Hindi" },
+    { identifier: "spanish", name: "Spanish" },
+];
+
+const lang = {
+    en: {
+        search: "Search",
+        gptSearchPlaceholder: "What would you like to watch today?",
+    },
+    hindi: {
+        search: "खोज",
+        gptSearchPlaceholder: "आज आप क्या देखना चाहेंगे?",
+    },
+    spanish: {
+        search: "buscar",
+        gptSearchPlaceholder: "¿Qué te gustaría ver hoy?",
+    },
+};
+
+export default lang;
 export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"
