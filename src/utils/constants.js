@@ -1,3 +1,5 @@
+import OpenAI from "openai";
+
 export const LOGO =
     "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 
@@ -12,6 +14,11 @@ export const API_OPTIONS = {
             "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NWZhMDk3ZjgwMjNlYTcyOWRhMDBjNzA3YWRhMmQ0OCIsIm5iZiI6MTcxNzY2MjY3Ny44ODQsInN1YiI6IjY2NjE3M2Q1YjE1MGJiZjc1NDQ0N2Y5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Io4NP0tOZCSy7D_kTBqGoCchd5_6XZMupiS8BQbbt0w"
     },
 };
+
+export const OPENAI_KEY = new OpenAI({
+    apiKey: "OPEN_API_SECRET_KEY",
+    dangerouslyAllowBrowser: true
+});
 
 export const SUPPORTED_LANGUAGES = [
     { identifier: "en", name: "English" },
