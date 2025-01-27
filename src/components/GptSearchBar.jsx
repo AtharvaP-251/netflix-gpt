@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS, BG_IMAGE } from "../utils/constants";
-import lang from "../utils/constants"
+import { lang } from "../utils/constants"
 import { OPENAI_KEY } from "../utils/constants";
 import { useRef } from "react";
 import { addGptMovies } from "../utils/gptSlice";
@@ -49,11 +49,11 @@ const GptSearchBar = () => {
     }
 
     return (
-        <div className="relative h-screen w-full">
+        <div className="h-screen w-full">
             <img
                 src={BG_IMAGE}
                 alt="background img"
-                className="absolute inset-0 w-full h-full object-cover -z-10 bg-gradient-to-t from-black"
+                className="fixed inset-0 w-full h-full object-cover -z-10"
             />
             <div className="relative flex justify-center" style={{ paddingTop: '13%' }}>
                 <div className="grid grid-cols-12 gap-4 bg-gray-800 bg-opacity-75 p-6 rounded-lg">

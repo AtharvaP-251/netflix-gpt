@@ -11,13 +11,13 @@ export const API_OPTIONS = {
     headers: {
         accept: "application/json",
         Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NWZhMDk3ZjgwMjNlYTcyOWRhMDBjNzA3YWRhMmQ0OCIsIm5iZiI6MTcxNzY2MjY3Ny44ODQsInN1YiI6IjY2NjE3M2Q1YjE1MGJiZjc1NDQ0N2Y5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Io4NP0tOZCSy7D_kTBqGoCchd5_6XZMupiS8BQbbt0w"
+            "Bearer " + process.env.REACT_APP_TMDB_KEY,
     },
 };
 
 export const OPENAI_KEY = new OpenAI({
-    apiKey: "OPEN_API_SECRET_KEY",
-    dangerouslyAllowBrowser: true
+    apiKey: process.env.REACT_APP_OPEN_AI_KEY,
+    dangerouslyAllowBrowser: true,
 });
 
 export const SUPPORTED_LANGUAGES = [
@@ -26,7 +26,7 @@ export const SUPPORTED_LANGUAGES = [
     { identifier: "spanish", name: "Spanish" },
 ];
 
-const lang = {
+export const lang = {
     en: {
         search: "Search",
         gptSearchPlaceholder: "What would you like to watch today?",
@@ -41,5 +41,4 @@ const lang = {
     },
 };
 
-export default lang;
 export const TMDB_IMG_URL = "https://image.tmdb.org/t/p/w500"
